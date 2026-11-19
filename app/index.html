@@ -3,23 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every trophy, a guide in plain words with its sources, a three-stage road to the platinum — and a tracker that remembers what you have earned. This page runs fully offline: no network, no account, no Rockstar artwork.</p>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="progress-detail" id="gradeCounts"></p>
+  </div>
+  <ul class="facts" id="facts"></ul>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<aside class="missable-banner" id="missableBanner">
+  <strong>One trophy can be missed.</strong>
+  <span id="missableText"></span>
+</aside>
+
+<main>
+  <section class="roadmap" id="roadmapSection" aria-label="Roadmap to the platinum">
+    <h2>Road to the platinum</h2>
+    <p class="section-note">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order.</p>
+    <div class="stages" id="roadmap"></div>
+  </section>
+
+  <section class="tracker" aria-label="Trophy tracker">
+    <h2>The checklist</h2>
+    <div class="controls">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off"></label>
+      <div class="kind-filters" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="kind-btn active">All</button>
+        <button type="button" data-kind="story" class="kind-btn">Story</button>
+        <button type="button" data-kind="missable" class="kind-btn">Missable</button>
+        <button type="button" data-kind="collectibles" class="kind-btn">Collectibles</button>
+        <button type="button" data-kind="activities" class="kind-btn">Activities</button>
+        <button type="button" data-kind="online" class="kind-btn">Online</button>
+      </div>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+      <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button">Reset</button>
+    </div>
+    <p class="list-note" id="listNote"></p>
+    <div id="list"></div>
+  </section>
+
+  <section class="sources" aria-label="Sources">
+    <h2>Sources</h2>
+    <p>Names, descriptions and grades are PlayStation's official text, as listed by Exophase and PSNProfiles. The guides are written in my own words for this entry — a source is cited, never copied. Each trophy names its sources beside its guide.</p>
+    <ul id="sourcesList"></ul>
+    <p class="fineprint">Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork, box art or game screenshots are used here.</p>
+  </section>
+</main>
 <script type="module" src="app.js"></script>
 </body>
 </html>
