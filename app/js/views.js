@@ -91,7 +91,7 @@ function detailPane(t, earnedSet, counts, guideNote) {
     <h2>${medal(t.grade)} ${esc(t.name)}</h2>
     <div class="grade-line">${esc(gradeName(t.grade))} &middot; ${esc(kindName(t.kind))} &middot; ${esc(stageName(t.stage))}${t.missable ? " &middot; Missable" : ""}</div>
     <blockquote>“${esc(t.description)}”<br><span style="color:var(--muted);font-size:12px">Official description, as PlayStation publishes it.</span></blockquote>
-    ${t.missable ? `<div class="callout"><b>Missable — do this first.</b> ${esc((t.steps.find((s) => s.startsWith("MISSABLE")) || "This trophy comes from a one-time chance in the story.").replace(/^MISSABLE:\s*/, ""))}</div>` : ""}
+    ${t.missable ? `<div class="callout"><b>Missable — do this first.</b> ${esc(((t.steps.find((s) => s.startsWith("MISSABLE")) || "This trophy comes from a one-time chance in the story.").replace(/^MISSABLE:\s*/, "").replace(/^./, (c) => c.toUpperCase())))}</div>` : ""}
     <p>${esc(t.guide)}</p>
     <ol>${steps}</ol>
     ${countBox}
