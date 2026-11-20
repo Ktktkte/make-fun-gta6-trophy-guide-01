@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI — Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <h1>GTA VI — Trophy Guide &amp; Tracker</h1>
+    <p class="subtitle">All 55 PlayStation 5 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze · 0 online trophies</p>
+  </div>
+  <div class="progress-box" id="progressBox">
+    <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressBar"></div></div>
+    <p class="progress-note">Platinum: <strong>Vice Got a Price!</strong> — earn the other 54.</p>
+  </div>
+</header>
+<nav class="tabs" aria-label="Sections">
+  <a href="#/" id="tabGuide">Guide &amp; tracker</a>
+  <a href="#/roadmap" id="tabRoadmap">Platinum roadmap</a>
+</nav>
+<p class="missable-banner" id="missableBanner">Only <strong>1 possibly missable</strong> trophy:
+  <a href="#/trophy/28">Positive Mental Attitude</a> — do Lucia&rsquo;s balcony meditation in Chapter 1.
+  <a href="#/roadmap">See the roadmap &rarr;</a></p>
+<section class="toolbar" id="toolbar">
+  <input id="search" type="search" placeholder="Search a trophy or its guide…" aria-label="Search trophies">
+  <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip active">All 55</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip">Missable</button>
+    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+    <button type="button" data-kind="activities" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <label class="grade-label">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="spoiler-label"><input type="checkbox" id="spoiler"> Spoiler mode — hide story trophies</label>
+  <div class="actions">
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="demo" type="button">Load sample progress</button>
+    <button id="reset" type="button">Reset</button>
+  </div>
+</section>
+<main>
+  <section id="view-guide" aria-label="Trophy guide">
+    <p id="resultCount" class="result-count"></p>
+    <div id="trophyList"></div>
+  </section>
+  <section id="view-roadmap" aria-label="Platinum roadmap" hidden>
+    <div id="roadmapView"></div>
+  </section>
+  <section id="view-detail" aria-label="Trophy detail" hidden>
+    <div id="trophyDetail"></div>
+  </section>
+</main>
+<footer>
+  <p>Guides are written in our own words for this entry. Trophy names, descriptions and grades are as PlayStation publishes them.
+  Every guide names its source — a cited guide beats an uncited one, however detailed.</p>
+  <p>Sources: PowerPyx, GTABase, KeenGamer, Push Square, GTA Spotter, Mobalytics, games.gg, Exophase / PSNProfiles.
+  This guide is unofficial and not affiliated with Rockstar Games. No official artwork is used.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
