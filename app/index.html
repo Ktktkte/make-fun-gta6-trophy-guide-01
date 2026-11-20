@@ -1,74 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<title>GTA 6 Trophy Guide — Leonida Checklist</title>
 <link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
 </head>
 <body>
-<header class="masthead">
-  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+<header id="top" class="masthead">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; offline guide &amp; tracker</p>
   <h1>Leonida Trophy Guide</h1>
-  <p class="lede">Every trophy, a guide in plain words with its sources, a three-stage road to the platinum — and a tracker that remembers what you have earned. This page runs fully offline: no network, no account, no Rockstar artwork.</p>
-  <div class="progress-wrap" aria-label="Progress">
-    <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
-    <div class="progress-bar"><div id="progressFill"></div></div>
-    <p class="progress-detail" id="gradeCounts"></p>
+  <p class="lede">Every one of the 55 official PS5 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a guide in our own words, a cited source beside each one, a roadmap to the platinum, and a checklist that saves in your browser.</p>
+  <div id="progress" class="progress" aria-label="Trophy progress">
+    <div class="progress-row">
+      <span id="progressLabel" class="progress-label">0 / 55 earned &middot; 0%</span>
+      <span id="gradeCounts" class="grade-counts"></span>
+    </div>
+    <div class="bar"><div id="progressFill" class="fill" style="width:0%"></div></div>
   </div>
-  <ul class="facts" id="facts"></ul>
+  <p class="missable-callout" id="missableCallout"><strong>Only 1 trophy can truly be missed.</strong> PowerPyx and GTABase both list <strong>Positive Mental Attitude</strong> as the game's only potentially missable trophy — a Chapter 1 meditation that is gone after Chapter 1. Everything else can be cleaned up in free roam after the story. The other flags below are story-gated or questline-gated trophies: they only unlock at one point in the story, but they cannot be missed if you play in order.</p>
 </header>
 
-<aside class="missable-banner" id="missableBanner">
-  <strong>One trophy can be missed.</strong>
-  <span id="missableText"></span>
-</aside>
+<div id="stickyBar" class="sticky-bar" aria-label="Trophy progress, always visible">
+  <span id="stickyLabel" class="sticky-label">0 / 55 earned &middot; 0%</span>
+  <div class="sticky-track"><div id="stickyFill" class="sticky-fill" style="width:0%"></div></div>
+  <span id="stickyGrades" class="sticky-grades"></span>
+</div>
 
 <main>
-  <section class="roadmap" id="roadmapSection" aria-label="Roadmap to the platinum">
-    <h2>Road to the platinum</h2>
-    <p class="section-note">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order.</p>
-    <div class="stages" id="roadmap"></div>
+  <section id="roadmap" class="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum — about 200 hours, one playthrough</h2>
+    <p class="roadmap-note">No difficulty settings, no New Game+, no mission replay — and no trophy depends on how you play a mission. Cheats disable trophies and saving, so keep them off. Free roam carries on after the credits, and the 100% checklist only appears under Progress &gt; Stats after the story. (Sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a>, <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy Guide</a>.)</p>
+    <ol class="stages">
+      <li class="stage">
+        <h3>Stage 1 — Play the story, and take side content as it shows up <span class="stage-time">60–80 hours</span></h3>
+        <p>Play the five chapters in order. The 12 story trophies land here: the opening mission Gone Fishing, the four chapter trophies, the final mission, and the six named missions (Breakfast Run in Chapter 2; The Cartel Heist in Chapter 3; Child's Play, Headliners and VCIA Takedown in Chapter 4; Operation Savage Glory in Chapter 5). Do the Chapter 1 meditation for Positive Mental Attitude — the one missable trophy. Start the long counts early: scan vehicles and WAiNK spots with the WAiNK app, meditate at every spot, and take each character questline (Cal, Kenton, Andy, Billy, Randy, Tyrone, Bret) the moment the character contacts you — several are only offered for a while.</p>
+        <p class="stage-trophies">Stage 1 trophies: the 12 story trophies, plus Positive Mental Attitude, Master of None and Stick Fiddler as you go.</p>
+      </li>
+      <li class="stage">
+        <h3>Stage 2 — Finish the 100% checklist <span class="stage-time">about 100 hours</span></h3>
+        <p>After the credits, open Progress &gt; Stats &gt; 100% Completion and work through what is left. The checklist is lenient — closer to 60% true completion. It demands in full: every robbery (all 8 bank vaults and all 39 gang operations), all underwater discoveries, every Shooting Range gold medal, all drone races and all 15 of Bret's Target Decks. Everything else is partial: 100 optional missions, 200 of 277 vehicle scans, 100 of 255 animal studies, 15 of 18 meditations, 70 of 80 challenges, 300 stunts and 100 WAiNK scans. Most of the miscellaneous trophies pop along the way.</p>
+        <p class="stage-trophies">Stage 2 trophies: A Long Road (gold) and the bulk of the activity, collectible, combat and money trophies.</p>
+      </li>
+      <li class="stage">
+        <h3>Stage 3 — Strangers &amp; Freaks and clean-up <span class="stage-time">about 10 hours</span></h3>
+        <p>Stranger missions are not part of 100%, but Strangers &amp; Freaks needs 8 qualifying strands (Kirk, Kyle, Yago and Pilot Pete count; the character questlines do not). Finish the character questlines — Andy (Lucia-only, Chapter 3), Kenton (7 shipwrecks), Billy (5 jobs), Randy (16 sports cars), Tyrone (synthetic labs), Bret (Target Decks) and Cal (fishing challenge) — then check the list below for anything left. The platinum pops with the last trophy.</p>
+        <p class="stage-trophies">Stage 3 trophies: the 8 questline trophies and Strangers &amp; Freaks (silver).</p>
+      </li>
+    </ol>
   </section>
 
-  <section class="tracker" aria-label="Trophy tracker">
-    <h2>The checklist</h2>
-    <div class="controls">
-      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off"></label>
-      <div class="kind-filters" role="group" aria-label="Filter by kind">
-        <button type="button" data-kind="all" class="kind-btn active">All</button>
-        <button type="button" data-kind="story" class="kind-btn">Story</button>
-        <button type="button" data-kind="missable" class="kind-btn">Missable</button>
-        <button type="button" data-kind="collectibles" class="kind-btn">Collectibles</button>
-        <button type="button" data-kind="activities" class="kind-btn">Activities</button>
-        <button type="button" data-kind="online" class="kind-btn">Online</button>
-      </div>
-      <label>Grade
-        <select id="gradeFilter">
-          <option value="all">All grades</option>
-          <option value="platinum">Platinum</option>
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="bronze">Bronze</option>
-        </select>
+  <section id="tracker" class="tracker" aria-label="Trophy tracker">
+    <h2>Tracker — all 55 trophies</h2>
+    <div id="controls" class="controls">
+      <label class="search-label" for="searchBox">Search
+        <input id="searchBox" type="search" placeholder="Search by trophy name…" autocomplete="off">
       </label>
-      <label class="check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
-      <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
-      <button id="exportBtn" type="button">Export progress</button>
-      <label class="import">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
-      <button id="resetBtn" type="button">Reset</button>
+      <div id="filters" class="filters" role="group" aria-label="Filter trophies">
+        <button type="button" class="filter is-active" data-filter="all">All 55</button>
+        <button type="button" class="filter" data-filter="story">Story</button>
+        <button type="button" class="filter" data-filter="missable">Missable &amp; story-gated</button>
+        <button type="button" class="filter" data-filter="collectible">Collectibles</button>
+        <button type="button" class="filter" data-filter="activity">Activities</button>
+        <button type="button" class="filter" data-filter="online">Online</button>
+      </div>
+      <label class="spoiler-toggle" for="spoilerToggle">
+        <input id="spoilerToggle" type="checkbox"> Spoiler-safe: hide story trophy names &amp; descriptions until earned
+      </label>
+      <div class="data-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <button type="button" id="importBtn">Import progress</button>
+        <input type="file" id="importFile" accept=".json,application/json" hidden>
+        <button type="button" id="resetBtn">Reset progress</button>
+      </div>
+      <p id="filterNote" class="filter-note"></p>
     </div>
-    <p class="list-note" id="listNote"></p>
-    <div id="list"></div>
+    <p id="listStatus" class="list-status">Loading the trophy list…</p>
+    <ul id="trophyList" class="trophy-list"></ul>
   </section>
 
-  <section class="sources" aria-label="Sources">
-    <h2>Sources</h2>
-    <p>Names, descriptions and grades are PlayStation's official text, as listed by Exophase and PSNProfiles. The guides are written in my own words for this entry — a source is cited, never copied. Each trophy names its sources beside its guide.</p>
-    <ul id="sourcesList"></ul>
-    <p class="fineprint">Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork, box art or game screenshots are used here.</p>
+  <section id="about" class="about" aria-label="About this guide">
+    <h2>About this guide</h2>
+    <p>Official names, descriptions and grades are shown exactly as PlayStation publishes them — the list as carried by the trophy trackers Exophase and PSNProfiles and reproduced in the <a href="https://all.gg/news/every-gta-6-psn-trophy/">All.gg full PSN list</a>. Every guide is written in our own words for this entry; nothing is copied from another guide. Where a guide's facts come from a published guide, the source is named and linked beside the trophy — mainly the <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase GTA 6 Trophy Guide &amp; Achievements List</a> and the <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx GTA 6 Trophy Guide &amp; Roadmap</a>. Where those guides say the exact steps are not yet confirmed, this guide says so instead of inventing a location or a step.</p>
+    <p>There are no online trophies: every trophy is earned in single-player. 28 of the 55 are hidden on PlayStation until earned — this guide marks them, and the spoiler setting hides their names and descriptions until you check them off.</p>
+    <p class="offline-note">This guide is a static offline app: it loads only its own files, fetches nothing from the network, and saves your checklist in your browser (localStorage). Export downloads a JSON file of your progress; import reads that file back. No account, no tracking, no Rockstar artwork — the look is our own.</p>
   </section>
 </main>
-<script type="module" src="app.js"></script>
+
+<footer class="colophon">
+  <p>Leonida Trophy Guide — an unofficial fan guide. Grand Theft Auto, GTA and Rockstar Games are trademarks of their owners; this guide is not affiliated with or endorsed by Rockstar Games. Trophy names and descriptions are reproduced as published by PlayStation for identification.</p>
+</footer>
 </body>
 </html>
