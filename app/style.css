@@ -1,0 +1,122 @@
+/* GTA 6 Trophy Guide — dark Vice-City-inspired look, no external assets. */
+:root {
+  --bg: #120e24;
+  --bg2: #1b1440;
+  --card: #1e1836;
+  --card2: #251d45;
+  --line: #3a2f6b;
+  --text: #f2eefc;
+  --muted: #b9b0dd;
+  --pink: #ff2e88;
+  --teal: #2ee6a8;
+  --gold: #ffd75e;
+  --silver: #c9d4e3;
+  --bronze: #d08a4e;
+  --platinum: #7fe7ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg2), var(--bg) 320px);
+  color: var(--text);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--teal); }
+a:visited { color: #8fd8c0; }
+.site-header { border-bottom: 3px solid var(--pink); background: #171130; }
+.header-inner {
+  max-width: 1080px; margin: 0 auto; padding: 22px 18px 16px;
+  display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: end;
+}
+h1 { margin: 0; font-size: 34px; letter-spacing: .5px; }
+.subtitle { margin: 4px 0 0; color: var(--pink); font-weight: 700; }
+.byline { margin: 6px 0 0; color: var(--muted); max-width: 640px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+button, select, input[type="search"] {
+  font: inherit; color: var(--text); background: var(--card2);
+  border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px;
+}
+button { cursor: pointer; }
+button:hover, button.active { border-color: var(--pink); background: #322763; }
+#import { display: none; }
+.import-label {
+  font: inherit; color: var(--text); background: var(--card2);
+  border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; cursor: pointer;
+}
+.import-label:hover { border-color: var(--pink); }
+#import-note { color: var(--teal); font-size: 14px; }
+.app { max-width: 1080px; margin: 0 auto; padding: 18px; }
+.loading { color: var(--muted); }
+
+/* Progress */
+.progress-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+.progress-line { font-size: 20px; }
+.progress-line span { color: var(--muted); font-size: 16px; }
+.bar { height: 12px; background: #0d0a1e; border-radius: 6px; margin: 10px 0 6px; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--pink), var(--teal)); border-radius: 6px; }
+.progress-sub { color: var(--muted); font-size: 14px; }
+.demo-badge { margin-top: 8px; color: var(--gold); font-size: 14px; }
+
+/* Tabs + filters */
+.tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.tabs button { font-weight: 700; }
+.tabs button.active { background: var(--pink); border-color: var(--pink); color: #fff; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+.filters input[type="search"] { flex: 1 1 240px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button { padding: 5px 10px; border-radius: 20px; font-size: 14px; }
+.chips button.active { background: var(--pink); border-color: var(--pink); color: #fff; }
+.spoiler-toggle { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: 14px; }
+.count-line { color: var(--muted); margin: 4px 0 12px; }
+.empty { color: var(--muted); }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px;
+}
+.card.earned { border-color: var(--teal); }
+.card.is-missable { border-left: 4px solid var(--gold); }
+.card.flash { outline: 3px solid var(--pink); outline-offset: 2px; }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.check { display: flex; gap: 8px; align-items: center; font-weight: 700; }
+.check input { width: 18px; height: 18px; accent-color: var(--teal); }
+.grade { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; padding: 3px 8px; border-radius: 20px; }
+.grade-platinum { background: #0e3a4d; color: var(--platinum); }
+.grade-gold { background: #4d3d0e; color: var(--gold); }
+.grade-silver { background: #333a47; color: var(--silver); }
+.grade-bronze { background: #4d2c14; color: var(--bronze); }
+.card h3 { margin: 10px 0 2px; font-size: 19px; }
+.desc { margin: 0 0 8px; color: var(--muted); font-style: italic; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.tag { font-size: 12px; background: var(--card2); border: 1px solid var(--line); border-radius: 20px; padding: 2px 8px; color: var(--muted); }
+.tag-missable { background: #4d3d0e; color: var(--gold); border-color: var(--gold); }
+.guide { margin: 8px 0; }
+.steps { margin: 6px 0 8px 20px; padding: 0; }
+.steps li { margin-bottom: 4px; }
+.masked-note { color: var(--muted); font-style: italic; }
+.sources { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.counter { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0; padding: 8px; background: var(--card2); border-radius: 8px; }
+.counter-label { font-weight: 700; }
+.counter-value { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--teal); }
+.counter button { padding: 3px 9px; }
+.counter-done { color: var(--teal); font-weight: 700; }
+
+/* Roadmap + missables */
+.roadmap-intro, .missables-intro, .missables-note {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px;
+}
+.rules, .watchouts { margin: 8px 0 0 20px; padding: 0; }
+.rules li, .watchouts li { margin-bottom: 4px; }
+.stage { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+.stage h3 { margin: 0 0 2px; }
+.stage-hours { color: var(--pink); font-weight: 700; margin: 0 0 8px; }
+.stage-list { columns: 2; margin: 8px 0 8px 20px; padding: 0; }
+@media (max-width: 760px) { .stage-list { columns: 1; } }
+.stage-list li { margin-bottom: 3px; }
+.stage-list li.done { color: var(--teal); }
+
+.site-footer { max-width: 1080px; margin: 0 auto; padding: 0 18px 30px; color: var(--muted); font-size: 14px; }
+.footer-note { font-size: 13px; }
